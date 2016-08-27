@@ -14,6 +14,7 @@ class InputProcessor
 public:
     void process (string rawCommand);
     InputProcessor();
+    ~InputProcessor();
 
 private:
     vector<AbstractProcessingStep *> steps;

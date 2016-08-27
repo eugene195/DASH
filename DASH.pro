@@ -5,11 +5,19 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     inputprocessor.cpp \
-    tokenizestep.cpp
+    command.cpp \
+    tokenizestep.cpp \
+    executecommand.cpp \
+    findcommandexecutable.cpp \
+    mapexecutabletooptions.cpp
 
 HEADERS += \
     inputprocessor.h \
     command.h \
     abstractprocessingstep.h \
-    tokenizestep.h
+    tokenizestep.h \
+    executecommand.h \
+    easylogging++.h \
+    findcommandexecutable.h \
+    mapexecutabletooptions.h
 
