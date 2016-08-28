@@ -7,11 +7,14 @@ UserInput ExecuteCommand::processCommand(UserInput &input)
 {
     for (auto command : input.getCommands())
     {
-        runExecution(
-                    prepareCommandForExecution(
-                        command.getExecutable(),
-                        command.getOptions()
-                        ));
+        if (command.getBuiltin()) {
+            runBuiltin(command);
+        } else {
+            runExecution(
+                        prepareCommandForExecution(
+                            command.getExecutable(),
+                            command.getOptions()));
+        }
     }
     return input;
 }
@@ -34,8 +37,10 @@ void ExecuteCommand::runExecution(vector<char*> argv)
     } else {
         LOG(INFO) << "--Fork failed--";
     }
+}
 
-    LOG(INFO) << endl << "--end of execution--" << endl;
+void ExecuteCommand::runBuiltin(const Command &command) {
+    command.getBuiltin()->execute(command.getOptions());
 }
 
 vector<char*> ExecuteCommand::prepareCommandForExecution(

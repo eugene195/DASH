@@ -9,14 +9,12 @@ INITIALIZE_EASYLOGGINGPP
 
 int main()
 {
-    cout << "Hello World!" << endl;
-
     InputProcessor processor;
     string rawCommand;
 
     while (1) {
+        cout << "$ ";
         getline(cin, rawCommand);
-        cout << rawCommand << endl;
         processor.process(rawCommand);
     }
     return 0;

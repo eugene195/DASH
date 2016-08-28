@@ -1,11 +1,16 @@
 #include "command.h"
 
-string Command::getExecutable() const
+const string& Command::getExecutable() const
 {
     return executable;
 }
 
-vector<string> Command::getOptions() const
+const vector<string>& Command::getOptions() const
 {
     return options;
+}
+
+const AbstractBuiltin* Command::getBuiltin() const
+{
+    return builtin;
 }

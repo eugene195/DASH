@@ -5,7 +5,7 @@
 #include <vector>
 
 #include "abstractprocessingstep.h"
-#include "tokenizestep.h"
+#include "steps/tokenizestep.h"
 
 using namespace std;
 

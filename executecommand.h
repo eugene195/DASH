@@ -10,6 +10,7 @@ public:
 
 private:
     void runExecution(vector<char*> argv);
+    void runBuiltin(const Command& command);
     vector<char *> prepareCommandForExecution(string command, const vector<string>& options);
 };
 
