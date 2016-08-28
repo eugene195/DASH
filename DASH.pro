@@ -11,7 +11,8 @@ SOURCES += main.cpp \
     command.cpp \
     builtins/changedirectory.cpp \
     builtins/printworkingdirectory.cpp \
-    steps/tokenizestep.cpp
+    steps/tokenizestep.cpp \
+    builtins/exit.cpp
 
 HEADERS += \
     inputprocessor.h \
@@ -24,5 +25,6 @@ HEADERS += \
     builtins/abstractbuiltin.h \
     builtins/changedirectory.h \
     builtins/printworkingdirectory.h \
-    steps/tokenizestep.h
+    steps/tokenizestep.h \
+    builtins/exit.h
 

@@ -4,6 +4,7 @@
 #include "abstractprocessingstep.h"
 #include "builtins/abstractbuiltin.h"
 #include "builtins/changedirectory.h"
+#include "builtins/exit.h"
 #include "builtins/printworkingdirectory.h"
 #include <map>
 
@@ -14,6 +15,7 @@ public:
     MapExecutableToOptions() :
         builtins {
             make_pair("cd", new ChangeDirectory),
+            make_pair("exit", new Exit),
             make_pair("pwd", new PrintWorkingDirectory)
         }
     {}

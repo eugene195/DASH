@@ -13,7 +13,7 @@ int main()
     string rawCommand;
 
     while (1) {
-        cout << "$ ";
+        cout << endl << "$ ";
         getline(cin, rawCommand);
         processor.process(rawCommand);
     }
