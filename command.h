@@ -16,10 +16,8 @@ public:
 
     const vector<string> &getTokens() const;
     void addTokens(const vector<string> &value);
-    void addTokens(const string value);
 
-    vector < pair<string, string> > getExecutables() const;
-    void setExecutables(const vector<pair<string, string> > &value);
+    const vector<pair<string, string> > &getExecutables() const;
     void addExecutable(string _executable, string path = "");
 
     void addOptionsToExecutable (const string executableName, const vector<string>& options);

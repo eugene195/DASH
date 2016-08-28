@@ -9,7 +9,8 @@ public:
     Command processCommand (Command &command);
 
 private:
-    void runExecution();
+    void runExecution(vector<char*> argv);
+    vector<char *> prepareCommandForExecution(string command, const vector<string>& options);
 };
 
 #endif // EXECUTECOMMAND_H
