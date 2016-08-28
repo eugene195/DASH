@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-#include "abstractprocessingstep.h"
+#include "steps/abstractprocessingstep.h"
 #include "steps/tokenizestep.h"
 
 using namespace std;

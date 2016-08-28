@@ -1,7 +1,7 @@
 #include "inputprocessor.h"
 #include "userinput.h"
-#include "mapexecutabletooptions.h"
-#include "executecommand.h"
+#include "steps/mapexecutabletooptions.h"
+#include "steps/executecommand.h"
 #include <algorithm>
 
 void InputProcessor::process(string& rawCommand)
@@ -17,7 +17,11 @@ void InputProcessor::process(string& rawCommand)
 
 InputProcessor::InputProcessor()
 {
-    this->steps = {new TokenizeStep, new MapExecutableToOptions, new ExecuteCommand};
+    this->steps = {
+        new TokenizeStep,
+        new MapExecutableToOptions,
+        new ExecuteCommand
+    };
 }
 
 InputProcessor::~InputProcessor()

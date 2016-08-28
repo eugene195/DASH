@@ -1,12 +1,12 @@
 #ifndef MAPCOMMANDTOOPTIONS_H
 #define MAPCOMMANDTOOPTIONS_H
 
-#include "abstractprocessingstep.h"
+#include <map>
+#include "steps/abstractprocessingstep.h"
 #include "builtins/abstractbuiltin.h"
 #include "builtins/changedirectory.h"
 #include "builtins/exit.h"
 #include "builtins/printworkingdirectory.h"
-#include <map>
 
 class MapExecutableToOptions : public AbstractProcessingStep
 {

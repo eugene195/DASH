@@ -5,26 +5,26 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     inputprocessor.cpp \
-    executecommand.cpp \
-    mapexecutabletooptions.cpp \
     userinput.cpp \
     command.cpp \
     builtins/changedirectory.cpp \
     builtins/printworkingdirectory.cpp \
     steps/tokenizestep.cpp \
-    builtins/exit.cpp
+    builtins/exit.cpp \
+    steps/executecommand.cpp \
+    steps/mapexecutabletooptions.cpp
 
 HEADERS += \
     inputprocessor.h \
-    abstractprocessingstep.h \
-    executecommand.h \
     easylogging++.h \
-    mapexecutabletooptions.h \
     userinput.h \
     command.h \
     builtins/abstractbuiltin.h \
     builtins/changedirectory.h \
     builtins/printworkingdirectory.h \
     steps/tokenizestep.h \
-    builtins/exit.h
+    builtins/exit.h \
+    steps/executecommand.h \
+    steps/abstractprocessingstep.h \
+    steps/mapexecutabletooptions.h
 
