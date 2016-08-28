@@ -6,7 +6,7 @@
 class ExecuteCommand : public AbstractProcessingStep
 {
 public:
-    Command processCommand (Command &command);
+    UserInput processCommand (UserInput &input);
 
 private:
     void runExecution(vector<char*> argv);

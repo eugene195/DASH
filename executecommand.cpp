@@ -3,13 +3,17 @@
 #include "easylogging++.h"
 #include <sys/wait.h>
 
-Command ExecuteCommand::processCommand(Command &command)
+UserInput ExecuteCommand::processCommand(UserInput &input)
 {
-    runExecution(prepareCommandForExecution(
-                     command.getExecutables().at(0).first,
-                     command.getOptionsForExecutable(commandName)
-                     ));
-    return command;
+    for (auto command : input.getCommands())
+    {
+        runExecution(
+                    prepareCommandForExecution(
+                        command.getExecutable(),
+                        command.getOptions()
+                        ));
+    }
+    return input;
 }
 
 void ExecuteCommand::runExecution(vector<char*> argv)

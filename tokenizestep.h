@@ -6,7 +6,7 @@
 class TokenizeStep : public AbstractProcessingStep
 {
 public:
-    Command processCommand (Command &command);
+    UserInput processCommand (UserInput &command);
     ~TokenizeStep();
 
 private:

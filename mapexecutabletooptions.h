@@ -6,7 +6,7 @@
 class MapExecutableToOptions : public AbstractProcessingStep
 {
 public:
-    Command processCommand (Command &command);
+    UserInput processCommand (UserInput &input);
 
 };
 

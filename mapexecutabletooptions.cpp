@@ -1,25 +1,24 @@
 #include "mapexecutabletooptions.h"
+#include "command.h"
 
-Command MapExecutableToOptions::processCommand(Command &command)
+UserInput MapExecutableToOptions::processCommand(UserInput &input)
 {
     /**
       FIXME
       Pipeline logics goes here
       */
 
-/*
+    /*
  * Single command algorithm
  *
 */
-    auto tokenIterator = command.getTokens().begin();
-    command.addOptionsToExecutable(
+    auto tokenIterator = input.getTokens().begin();
+    Command command(
                 *tokenIterator,
                 vector<string>(
                     tokenIterator + 1,
-                    command.getTokens().end()
-                )
-    );
-    command.addExecutable(*command.getTokens().begin());
+                    input.getTokens().end()));
 
-    return command;
+    input.appendCommand(command);
+    return input;
 }

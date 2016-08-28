@@ -1,7 +1,7 @@
 #include "tokenizestep.h"
 #include <sstream>
 
-Command TokenizeStep::processCommand(Command &command)
+UserInput TokenizeStep::processCommand(UserInput &command)
 {
     command.addTokens(split(command.getRawInput()));
     return command;

@@ -3,35 +3,23 @@
 
 #include <string>
 #include <vector>
-#include <list>
-#include <map>
-
 
 using namespace std;
 
 class Command
 {
 public:
-    Command(string raw) : rawInput(raw) {}
+    Command(const string _executable, const vector<string>& _options) :
+        executable(_executable),
+        options(_options) {}
 
-    const vector<string> &getTokens() const;
-    void addTokens(const vector<string> &value);
+    string getExecutable() const;
 
-    const vector<pair<string, string> > &getExecutables() const;
-    void addExecutable(string _executable, string path = "");
-
-    void addOptionsToExecutable (const string executableName, const vector<string>& options);
-    vector<string> getOptionsForExecutable (const string executableName) const;
-
-    string getRawInput() const;
+    vector<string> getOptions() const;
 
 private:
-    string rawInput;
-
-    vector <string> tokens;
-    map <string, vector<string> > commandOptions;
-    vector < pair<string, string> > executables;
-    // MAP options;
+    const string executable;
+    const vector<string> options;
 };
 
 #endif // COMMAND_H

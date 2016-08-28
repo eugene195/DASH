@@ -1,12 +1,12 @@
 #ifndef PROCESSINGSTEP_H
 #define PROCESSINGSTEP_H
 
-#include "command.h"
+#include "userinput.h"
 
 class AbstractProcessingStep
 {
 public:
-    virtual Command processCommand (Command &command) = 0;
+    virtual UserInput processCommand (UserInput &command) = 0;
     virtual ~AbstractProcessingStep() {}
 };
 
